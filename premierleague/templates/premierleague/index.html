@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<style type="text/css">
+  TABLE {
+   width: 530px;
+   border-collapse: collapse;
+  }
+  TD, TH {
+   padding: 3px;
+   border: 1px solid #403d39;
+  }
+  TH {
+   background: #f1b49c;
+  }
+ </style>
+
+<table>
+    <h2>Manchester United</h2>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Age</th>
+      <th>Country</th>
+      <th>Market Value - M€</th>
+    </tr>
+
+    {% for instance in data %}
+    <tr>
+      <td>{{ instance.fields.name }}</td>
+      <td>{{ instance.fields.surname }}</td>
+      <td>{{ instance.fields.age }}</td>
+      <td>{{ instance.fields.country }}</td>
+      <td>{{ instance.fields.market_value }}</td>
+    </tr>
+    {% endfor %}
+
+  </table>
+  
